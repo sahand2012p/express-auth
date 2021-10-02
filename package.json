@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sahand2012p/express-auth/issues"
   },
-  "homepage": "https://github.com/sahand2012p/express-auth#readme"
+  "homepage": "https://github.com/sahand2012p/express-auth#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
