@@ -5,6 +5,8 @@ require('dotenv/config')
 
 mongoose.connect(process.env.DB_CONNECTION_URL)
 
+app.use(express.json())
+
 const authRoute = require('./routes/auth')
 
 app.use('/api/user', authRoute)
