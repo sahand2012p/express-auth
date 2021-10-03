@@ -11,6 +11,9 @@ const valSchema = {
 }
 
 router.post('/register', async (req, res) => {
+    
+    const { error } = Joi.valid(req.body, schema)
+    
     const user = new User({
         name: req.body.name,
         email: req.body.email,
@@ -21,7 +24,7 @@ router.post('/register', async (req, res) => {
         const savedUser = await user.save()
         res.send(savedUser)
     } catch (err) {
-        res.status(500).send(err)
+        res.status(500).send(error.details[0].message)
     }
 })
 
