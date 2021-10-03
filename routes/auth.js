@@ -12,7 +12,7 @@ const valSchema = {
 
 router.post('/register', async (req, res) => {
     
-    const { error } = Joi.valid(req.body, schema)
+    const { error } = Joi.valid(req.body, valSchema)
     
     const user = new User({
         name: req.body.name,
